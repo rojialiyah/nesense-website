@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoSense-AI | Smart Neonatal Monitoring</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #0E6B56;
+            --secondary: #D4AF37;
+            --bg-light: #F9FAFB;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        /* Navigation & Logo */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo-container { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+        .btn { padding: 10px 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+        .btn:hover { background: #0a4f3f; }
+
+        /* Hero Section */
+        header { text-align: center; padding: 80px 5%; background: linear-gradient(to right, #0E6B56, #148f73); color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; line-height: 1.2; }
+        header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; font-weight: 300; }
+        
+        /* Sections */
+        section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary); margin-bottom: 50px; }
+        
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        /* Cards */
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid var(--primary); }
+        .card h3 { color: var(--primary); margin: 15px 0; font-size: 1.4rem; }
+        .card p { color: var(--text-light); }
+
+        /* Story Highlight */
+        .story-box { background: #E6F0EE; padding: 40px; border-left: 6px solid var(--primary); border-radius: 8px; }
+        .story-box h3 { color: var(--primary); margin-bottom: 15px; }
+
+        /* Footer */
+        footer { background: #111; color: white; text-align: center; padding: 30px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation with Custom SVG Logo -->
+    <nav>
+        <div class="logo-container">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Shield Base -->
+                <path d="M50 5L90 20V45C90 70 50 95 50 95C50 95 10 70 10 45V20L50 5Z" fill="#E6F0EE" stroke="#0E6B56" stroke-width="6" stroke-linejoin="round"/>
+                <!-- Pulse / Signal -->
+                <path d="M25 50H40L47 30L58 70L65 50H75" stroke="#0E6B56" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- AI Node Dot -->
+                <circle cx="58" cy="70" r="4" fill="#D4AF37"/>
+            </svg>
+            NeoSense-AI
+        </div>
+        <a href="#contact" class="btn">Partner With Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Sensing danger before it becomes fatal.</h1>
+        <p>A low-cost, AI-assisted point-of-care system for early neonatal sepsis detection. Built for real healthcare settings, designed to save newborn lives.</p>
+        <a href="#how-it-works" class="btn" style="background: white; color: var(--primary);">Discover How It Works</a>
+    </header>
+
+    <!-- Problem Section -->
+    <section>
+        <div class="grid-2">
+            <div>
+                <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 20px;">The diagnostic window is small. The delay is deadly.</h2>
+                <p style="margin-bottom: 15px; color: var(--text-light);">Globally, over 3 million neonates are affected by sepsis each year. In resource-constrained settings, clinical teams often wait 48 to 72 hours for blood culture confirmations.</p>
+                <p style="font-weight: 600; color: var(--text-dark);">We believe healthcare workers shouldn't have to wait days to make life-saving decisions.</p>
+            </div>
+            <div class="story-box">
+                <h3>For Zainab, the warning came too late.</h3>
+                <p>The tragedy of Zainab's baby was not that sepsis had no treatment. The tragedy was that the early warning signs were not detected in time. NeoSense gives clinical teams the early signal that Zainab's baby did not have.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" style="background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); padding: 60px 5%;">
+        <h2 class="section-title">Clearer Decisions. Faster Action.</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div style="font-size: 3rem;">🩸</div>
+                <h3>1. Detect</h3>
+                <p>A low-cost lateral-flow strip detects infection-related biomarkers (like CRP) from a small sample in minutes.</p>
+            </div>
+            <div class="card">
+                <div style="font-size: 3rem;">📱</div>
+                <h3>2. Interpret</h3>
+                <p>Our mobile app captures the strip and utilizes AI computer vision to quantify line intensity, eliminating human visual error.</p>
+            </div>
+            <div class="card">
+                <div style="font-size: 3rem;">⚡</div>
+                <h3>3. Recommend</h3>
+                <p>Biomarker data and clinical inputs are combined to output a specific risk category and a recommended next clinical step.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section>
+        <h2 class="section-title">Built for Real-World Resilience</h2>
+        <div class="grid-2">
+            <div>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 20px;"><strong>✅ Offline-Ready:</strong> Designed to function in rural Primary Healthcare Centres with low connectivity.</li>
+                    <li style="margin-bottom: 20px;"><strong>✅ Highly Affordable:</strong> A strip-first model targeting under $2 per test to ensure sustainable impact.</li>
+                    <li style="margin-bottom: 20px;"><strong>✅ Reduced NICU Burden:</strong> Automated interpretation supports busy nurses with clear escalation pathways.</li>
+                </ul>
+            </div>
+            <div style="background: var(--primary); color: white; padding: 40px; border-radius: 12px; text-align: center;">
+                <h3 style="margin-bottom: 15px;">Fusing Medicine & Engineering</h3>
+                <p>We are a team blending clinical insight and device engineering to build technology that survives scarce time, scarce labs, and scarce power.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2 style="margin-bottom: 15px;">Help us turn a prototype into clinical evidence.</h2>
+        <p style="margin-bottom: 30px; color: #aaa;">We are seeking clinical mentors, hospital partners, and pilot funding to scale across Nigeria.</p>
+        <a href="mailto:your-email@example.com" class="btn">Contact the Founders</a>
+        <p style="margin-top: 40px; font-size: 0.8rem; color: #666;">&copy; 2026 NeoSense-AI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
